@@ -3,177 +3,217 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deep Shah | Personal Website</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
+  <title>Deep Shah | Futuristic Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
-    /* 🎨 General Page Styling */
+    /* === Base Styling === */
     body {
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(135deg, #7F00FF, #E100FF);
-      color: #333;
       margin: 0;
-      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #01020A, #021C26, #053A3D);
+      color: #e0f7fa;
+      overflow-x: hidden;
     }
 
-    /* 🌟 Header */
     header {
       text-align: center;
-      padding: 50px 20px;
-      background-color: rgba(255, 255, 255, 0.9);
-      border-bottom-left-radius: 40px;
-      border-bottom-right-radius: 40px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      padding: 80px 20px;
+      background: linear-gradient(90deg, #00E5FF, #00FFAF);
+      color: #0A0A0A;
+      box-shadow: 0 4px 30px rgba(0, 255, 200, 0.4);
+      border-bottom: 3px solid #00FFAF;
     }
 
     header h1 {
+      font-family: 'Orbitron', sans-serif;
       font-size: 3rem;
-      margin: 0;
-      color: #7F00FF;
+      margin-bottom: 10px;
     }
 
     header p {
       font-size: 1.2rem;
-      color: #555;
+      letter-spacing: 1px;
     }
 
-    /* 👤 Profile Section */
-    .profile {
+    .profile-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px;
       text-align: center;
-      margin: 40px auto;
-      background: white;
-      width: 80%;
-      max-width: 600px;
-      padding: 30px;
-      border-radius: 25px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     }
 
-    .profile img {
+    .profile-section img {
       width: 150px;
       height: 150px;
       border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .profile h2 {
-      margin-top: 20px;
-      color: #7F00FF;
-    }
-
-    .profile p {
-      color: #666;
-    }
-
-    /* ⚽ Hobbies Section */
-    .hobbies {
-      margin: 50px auto;
-      width: 90%;
-      text-align: center;
-    }
-
-    .hobbies h3 {
-      font-size: 1.8rem;
-      color: white;
+      border: 4px solid #00E5FF;
+      box-shadow: 0 0 25px #00FFAF;
       margin-bottom: 20px;
     }
 
-    .hobby-list {
+    .profile-section p {
+      max-width: 600px;
+      line-height: 1.6;
+      font-size: 1.1rem;
+      color: #B8FFF4;
+    }
+
+    .hobbies-section {
+      padding: 60px 20px;
+      background: rgba(0, 255, 175, 0.05);
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .hobbies-section h2 {
+      font-family: 'Orbitron', sans-serif;
+      color: #00FFAF;
+      margin-bottom: 30px;
+    }
+
+    .hobbies {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 30px;
     }
 
-    .hobby {
-      background: white;
-      padding: 20px;
-      border-radius: 20px;
-      width: 120px;
-      text-align: center;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      font-weight: 600;
+    .hobby-card {
+      background: linear-gradient(145deg, #012F34, #023E3F);
+      border: 1px solid #00E5FF;
+      border-radius: 15px;
+      padding: 20px 30px;
+      width: 200px;
+      box-shadow: 0 0 20px rgba(0, 255, 200, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    /* 💬 Quote Box */
-    .quote {
-      margin: 60px auto;
-      background-color: white;
-      width: 80%;
-      max-width: 600px;
+    .hobby-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 35px rgba(0, 255, 200, 0.6);
+    }
+
+    .hobby-card span {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .quote-section {
+      padding: 80px 20px;
       text-align: center;
-      padding: 25px;
-      border-radius: 20px;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      background: linear-gradient(90deg, #021C26, #053A3D);
+      color: #00E5FF;
       font-style: italic;
-      color: #555;
+      font-size: 1.5rem;
     }
 
-    /* 🔗 Footer */
-    footer {
+    .projects-section {
+      padding: 60px 20px;
       text-align: center;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 20px;
-      border-top-left-radius: 40px;
-      border-top-right-radius: 40px;
-      box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
     }
 
-    footer a {
-      margin: 0 10px;
-      color: #7F00FF;
-      text-decoration: none;
-      font-weight: 600;
+    .projects-section h2 {
+      font-family: 'Orbitron', sans-serif;
+      color: #00FFAF;
+      margin-bottom: 40px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .project-card {
+      background: rgba(0, 255, 175, 0.07);
+      border-radius: 15px;
+      padding: 25px;
+      border: 1px solid #00E5FF;
+      box-shadow: 0 0 25px rgba(0, 255, 200, 0.3);
       transition: 0.3s;
     }
 
-    footer a:hover {
-      color: #E100FF;
+    .project-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 35px rgba(0, 255, 200, 0.7);
+    }
+
+    footer {
+      background: #010B10;
+      padding: 40px 20px;
+      text-align: center;
+      color: #A8FFF0;
+      border-top: 2px solid #00E5FF;
+    }
+
+    .social-links a {
+      color: #00E5FF;
+      margin: 0 15px;
+      font-size: 1.4rem;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #00FFAF;
+      text-shadow: 0 0 10px #00FFAF;
     }
   </style>
 </head>
 <body>
-
-  <!-- 🌟 Header Section -->
   <header>
     <h1>Deep Shah</h1>
-    <p>From Etobicoke | Dreamer • Creator • Explorer</p>
+    <p>Tech Explorer | Innovator | Dream Builder</p>
   </header>
 
-  <!-- 👤 Profile Section -->
-  <section class="profile">
-    <img src="https://via.placeholder.com/150" alt="Profile photo of Deep Shah">
-    <h2>Hello, I'm Deep!</h2>
-    <p>I'm passionate about cricket, football, cooking, business, and technology. Always exploring how ideas can come to life through creativity and code!</p>
+  <section class="profile-section">
+    <img src="https://via.placeholder.com/150" alt="Profile Photo">
+    <p>Hello, I’m Deep Shah from Etobicoke — passionate about tech, creativity, and innovation. I love combining design and code to build ideas that come to life. Whether it’s exploring AI or trying new recipes, I enjoy learning and experimenting with new things every day.</p>
   </section>
 
-  <!-- ⚽ Hobbies Section -->
-  <section class="hobbies">
-    <h3>Hobbies & Interests</h3>
-    <div class="hobby-list">
-      <div class="hobby">🏏 Cricket</div>
-      <div class="hobby">⚽ Football</div>
-      <div class="hobby">🍳 Cooking</div>
-      <div class="hobby">💼 Business</div>
-      <div class="hobby">💻 Tech</div>
+  <section class="hobbies-section">
+    <h2>💫 Hobbies & Interests</h2>
+    <div class="hobbies">
+      <div class="hobby-card"><span>🏏</span>Cricket</div>
+      <div class="hobby-card"><span>⚽</span>Football</div>
+      <div class="hobby-card"><span>🍳</span>Cooking</div>
+      <div class="hobby-card"><span>💻</span>Business & Tech</div>
     </div>
   </section>
 
-  <!-- 💬 Quote Box -->
-  <section class="quote">
-    "Stay curious, keep creating, and never stop learning."
+  <section class="quote-section">
+    <p>“The future belongs to those who create it.”</p>
   </section>
 
-  <!-- 🔗 Footer Section -->
+  <section class="projects-section">
+    <h2>🚀 Featured Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>AI Chat Companion</h3>
+        <p>A fun conversational assistant powered by AI APIs — built to learn and adapt.</p>
+      </div>
+      <div class="project-card">
+        <h3>Smart Recipe App</h3>
+        <p>Find recipes based on what’s in your fridge — using computer vision and ML.</p>
+      </div>
+      <div class="project-card">
+        <h3>Startup Tracker</h3>
+        <p>Monitor new startups, trends, and investment rounds with live data feeds.</p>
+      </div>
+    </div>
+  </section>
+
   <footer>
     <p>Connect with me:</p>
-    <a href="#">Instagram</a> |
-    <a href="#">GitHub</a> |
-    <a href="#">TikTok</a>
+    <div class="social-links">
+      <a href="#">🌐 Website</a>
+      <a href="#">💼 GitHub</a>
+      <a href="#">📸 Instagram</a>
+    </div>
+    <p style="margin-top:20px; font-size:0.9rem;">© 2025 Deep Shah | Designed with 💙 & 💚</p>
   </footer>
-
 </body>
 </html>
